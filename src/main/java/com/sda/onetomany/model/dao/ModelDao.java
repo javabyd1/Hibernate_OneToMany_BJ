@@ -34,4 +34,18 @@ public class ModelDao {
     public void closeSession() {
         sessionFactory.close();
     }
+
+    public void getData(int userId) {
+
+        Session session = sessionFactory.openSession();
+
+        session.beginTransaction();
+        User user = session.get(User.class, userId);
+
+        System.out.print("Zamówienia użytkownika: "+user.getUserName()+" "+user.getUserSurname()+": ");
+        for (int i = 0; i < user.getOrdersList().size(); i++) {
+            System.out.println(user.getOrdersList().get(i).getOrderDate()+" "+user.getOrdersList().get(i).getOrderList());
+        }
+        session.close();
+    }
 }

@@ -54,11 +54,21 @@ public class User {
 		this.userAddress = userAddress;
 	}
 
-	public List<UserOrder> getVehiclesList() {
+	public List<UserOrder> getOrdersList() {
 		return orderList;
 	}
 
 	public void setVehiclesList(List<UserOrder> vehiclesList) {
 		this.orderList = vehiclesList;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"userId=" + userId +
+				", userName='" + userName + '\'' +
+				", userSurname='" + userSurname + '\'' +
+				", userAddress='" + userAddress + '\'' +
+				'}';
 	}
 }

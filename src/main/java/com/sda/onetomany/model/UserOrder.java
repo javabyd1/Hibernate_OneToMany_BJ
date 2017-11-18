@@ -50,4 +50,14 @@ public class UserOrder {
 	public void setOrderDate(LocalDate orderDate) {
 		this.orderDate = orderDate;
 	}
+
+	@Override
+	public String toString() {
+		return "UserOrder{" +
+				"orderId=" + orderId +
+				", user=" + user +
+				", orderList='" + orderList + '\'' +
+				", orderDate=" + orderDate +
+				'}';
+	}
 }
