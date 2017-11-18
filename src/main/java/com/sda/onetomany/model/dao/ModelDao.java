@@ -30,4 +30,8 @@ public class ModelDao {
         session.getTransaction().commit();
         session.close();
     }
+
+    public void closeSession() {
+        sessionFactory.close();
+    }
 }

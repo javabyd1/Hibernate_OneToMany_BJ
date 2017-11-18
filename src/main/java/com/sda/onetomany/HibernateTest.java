@@ -3,6 +3,8 @@ package com.sda.onetomany;
 import com.sda.onetomany.model.User;
 import com.sda.onetomany.model.UserOrder;
 import com.sda.onetomany.model.dao.ModelDao;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 
 import java.time.LocalDate;
 
@@ -38,6 +40,6 @@ public class HibernateTest {
 		modelDao.addOrder(order2);
 		modelDao.addOrder(order3);
 
-
+		modelDao.closeSession();
 	}
 }
